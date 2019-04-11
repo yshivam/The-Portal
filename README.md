@@ -2,9 +2,9 @@
 
 # Services 
 
-SaaS - Software as a Service
-PaaS - Platform as a Service
-STaaS - Storage as a Service
-IaaS - Infrastructure as a Service
-CaaS - Container as a Service
-BDaaS - BigData as a Service
+- SaaS - Software as a Service
+- PaaS - Platform as a Service
+- STaaS - Storage as a Service
+- IaaS - Infrastructure as a Service
+- CaaS - Container as a Service
+- BDaaS - BigData as a Service
