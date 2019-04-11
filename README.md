@@ -4,7 +4,7 @@
 
 - SaaS  -  Software as a Service
 - PaaS  -  Platform as a Service
-- STaaS -  Storage as a Service
+- STaaS -  Storage as a Service (Block and Object)
 - IaaS  -  Infrastructure as a Service
 - CaaS  -  Container as a Service
 - BDaaS -  BigData as a Service
