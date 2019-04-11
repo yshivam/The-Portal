@@ -1,0 +1,12 @@
+- hosts: one
+  tasks:
+  - include_vars: "main.yml"
+  - replace:
+     path: "/etc/hadoop/mapred-site.xml"
+     regexp: "^<configuration>\n<property>\n<name>mapred.job.tracker</name>\n<value>192.168.43.105:9002</value>\n</property>"
+     replace: "<configuration>"
+  - replace:
+     path: "/etc/hadoop/mapred-site.xml"
+     regexp: "^<configuration>"
+     replace: "<configuration>\n<property>\n<name>mapred.job.tracker</name>\n<value>192.168.43.105:9002</value>\n</property>"
+  - command: "hadoop-daemon.sh start tasktracker "

@@ -1,0 +1,38 @@
+- hosts: localhost
+  vars_prompt:
+   - name: client
+     prompt: "Enter your user name "
+     private: false
+   - name: size
+     prompt: "Enter the size of storage in MB"
+     private: false
+  tasks:
+   - yum:
+      name: "scsi-target-utils"
+      state: present
+   
+   
+   - command: "iptables -F"
+   - command: "setenforce 0"
+
+   - service:
+      name: "tgtd"
+      state: restarted
+
+
+   - lvol:
+      vg: "vgcloud"
+      lv: "{{ client }}"
+      size: "{{ size }}"
+
+
+   - lineinfile:
+      path: "/etc/tgt/targets.conf"
+      regexp: "^default"
+      line: "default-driver iscsi\n <target mycloud>\nbacking-store /vgcloud/{{client}}\n</target>"
+#  - name: to make file system
+#   filesystem:
+#    fstype: ext4
+#   dev: "/dev/vgcloud/{{ client }}"
+#  force: yes
+  

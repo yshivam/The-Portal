@@ -1,0 +1,39 @@
+- hosts: localhost
+  vars_prompt:
+   - name: client
+     prompt: "Enter your user name "
+     private: false
+   - name: size
+     prompt: "Enter the size of storage in MB"
+     private: false
+  tasks:
+  - name: create lv
+    lvol:
+      vg: "vgcloud"
+      lv: "{{ client }}"
+      size: "{{ size }}"
+  - name: to make file system
+    filesystem:
+      fstype: ext4
+      dev: "/dev/vgcloud/{{ client }}"
+      force: yes
+  - name: to make a folder
+    file:
+      path: /staas/{{ client }}
+      state: directory
+  - name: to mount the folder
+    mount:
+      path: /staas/{{ client }}
+      src: /dev/vgcloud/{{ client }}
+      fstype: ext4
+      state: present
+  - name: write in file
+    lineinfile:
+      path: /etc/exports
+      line: "/staas/client *(rw, no_root_squash)"
+  - name: start nfs service
+    service:
+      name: nfs
+      state: started
+      enabled: yes
+

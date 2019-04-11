@@ -1,0 +1,23 @@
+- hosts: namenode
+  tasks:
+  - file:
+     path: /namenode2
+     state: directory
+  - replace:
+     path: "/etc/hadoop/hdfs-site.xml"
+     regexp: "^<configuration>\n<property>\n<name>dfs.name.dir</name>\n<value>/namenode2</value>\n</property>"
+     replace: "<configuration>"
+  - replace:
+     path: "/etc/hadoop/hdfs-site.xml"
+     regexp: "^<configuration>"
+     replace: "<configuration>\n<property>\n<name>dfs.name.dir</name>\n<value>/namenode2</value>\n</property>"
+  - replace:
+     path: "/etc/hadoop/core-site.xml"
+     regexp: "^<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://192.168.1.7:9001</value>\n</property>"
+     replace: "<configuration>"
+  - replace:
+     path: "/etc/hadoop/core-site.xml"
+     regexp: "^<configuration>"
+     replace: "<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://192.168.43.7:9001</value>\n</property>"
+  - command: "echo 'Y'|hadoop namenode -format"
+  - command: "hadoop-daemon.sh start namenode"

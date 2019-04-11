@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  vars_prompt:
+  - name: x
+    private: false
+  tasks:
+  - name: "install docker-py"
+    pip:
+      name: "docker-py"
+  
+  - name: "create container"
+    docker_container:
+      name: "{{x}}"
+      image: "shellinabox_test:v1"
+      state: started
+      tty: true
+      interactive: true
+      command: "/bin/bash"
+      privileged: true
+      exposed_ports: 4200
+      ports:
+       - "9093:4200"
+   
+  - name: "start shellinabox"
+    shell: "docker exec '{{x}}' /usr/sbin/shellinaboxd -t -s /:SSH:0.0.0.0 -p 4200 &"

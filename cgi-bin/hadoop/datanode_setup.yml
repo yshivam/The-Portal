@@ -1,0 +1,19 @@
+- hosts: five
+  tasks:
+  - replace:
+     path: "/etc/hadoop/hdfs-site.xml"
+     regexp: "^<configuration>\n<property>\n<name>dfs.data.dir</name>\n<value>/datanode</value>\n</property>"
+     replace: "<configuration>"
+  - replace:
+     path: "/etc/hadoop/hdfs-site.xml"
+     regexp: "^<configuration>"
+     replace: "<configuration>\n<property>\n<name>dfs.data.dir</name>\n<value>/datanode</value>\n</property>"
+  - replace:
+     path: "/etc/hadoop/core-site.xml"
+     regexp: "^<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://{{name_node_ip}}:9001</value>\n</property>"
+     replace: "<configuration>"
+  - replace:
+     path: "/etc/hadoop/core-site.xml"
+     regexp: "^<configuration>"
+     replace: "<configuration>\n<property>\n<name>fs.default.name</name>\n<value>hdfs://{{name_node_ip}}:9001</value>\n</property>"
+  - command: "hadoop-daemon.sh start datanode "

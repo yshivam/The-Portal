@@ -1,0 +1,156 @@
+#!/usr/bin/python36
+
+print("content-type: text/html")
+print("")
+
+
+
+
+print("""<!DOCTYPE html>
+<html>
+<head>
+	<title>The Portal</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="anim.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+	 <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+				<a class="navbar-brand" href="index.html">PORTAL</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-nav-demo">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="cloud.html" target="_blank">Cloud Service</a></li>
+					<li><a href="index.html">Hadoop Service</a></li>
+					<li><a href="index.html">Web Server</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script type="text/javascript">
+		if (screen.width <= 699) {
+			document.location = "/mobile_view";
+			}
+    </script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <!--compiled javascripts!-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<section class="hero">
+		<div class="background-image" style="background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/dark-blue-tech-circuit-board-technology-animated-background-video-graphic-design-ultra-hd-4k-3840x2160_sgelpuywg_thumbnail-full05.png);"></div>
+		<div class="hero-content-area">
+			<h1>Welcome To The Portal</h1>
+			<h3>One Port, for all IT Services</h3>
+
+		</div>
+		</div>
+
+	</section>
+
+
+	<div id="layer">
+
+		<section class="layer">
+		<div class="layer-area">
+			<p style="float: left; clear: left"><img src="https://www.guruadvisor.net/images/cloud.png" height=50% width=50% border="1px"></p>
+			<h1>Cloud Services, On the go</h1>
+			<h3>Unleash the power of cloud</h3>
+
+		<a class="btn btn-lg btn-filled" id = "cloud" href="cloud.html" target="_blank">Get Cloud Service</a>
+		
+	
+		</div>
+		</div>
+
+	</section>
+		
+	</div>
+	
+
+
+	<div id="layer2">
+
+		<section class="layer2">
+		<div class="background-image" style="background-image: url(https://images.pexels.com/photos/397998/pexels-photo-397998.jpeg?cs=srgb&dl=abstract-bright-color-397998.jpg&fm=jpg);"></div>
+		<div class="layer2-area">
+			<h1>Big Data and Hadoop </h1>
+			<h3>Future is Big Data</h3>
+
+		<a class="btn btn-lg btn-filled" id = "cloud" href="hadoop.html" target="_blank">Hadoop Portal</a>
+		
+	
+		</div>
+		</div>
+
+	</section>
+		
+	</div>
+
+
+	<div id="layer3">
+
+		<section class="web">
+		<div class="background-image" style="background-image: url(https://images.pexels.com/photos/397998/pexels-photo-397998.jpeg?cs=srgb&dl=abstract-bright-color-397998.jpg&fm=jpg);"></div>
+		<div class="layer3-area">
+			<h1>Get Started with Web Services </h1>
+			<h3>Configure Your Web Server</h3>
+
+		<a class="btn btn-lg btn-filled" id = "cloud" href="cloud.html" target="_blank">Configure Web Server</a>
+		
+	
+		</div>
+		</div>
+
+	</section>
+		
+	</div>
+
+
+	<div id="layer4">
+
+		<section class="info">
+		<div class="layer4-area">
+			<h1>About Us </h1>
+			<p>Get our service, on the go. <br>Fast and Reliable!
+						<br>Trademark 2018</p>
+
+					
+	
+		</div>
+		</div>
+
+	</section>
+		
+	</div>
+
+
+	<div class="stripe">Made By Sense4   <i class="em em-grinning"></i></div>
+
+	
+
+</body>
+</html>""")
