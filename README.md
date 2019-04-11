@@ -1,4 +1,4 @@
-# The-Portal - An automated IT solution web-app to provide all the Major Cloud Services.
+# The Portal - An automated IT solution web-app to provide all the Major Cloud Services.
 
 # Services 
 
