@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/display.css">
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <h1>Configuring Hadoop Cluster</h1>
+
+<h3>Fill the form to use hadoop services</h3>
+
+<div>
+  <form action="http://192.168.43.7/cgi-bin/mapsetup.py">
+    <label for="fname">Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="johnwick">
+    
+    <label for="password">Enter your password</label>
+    <input type="password" id="pass" name="passw" placeholder="password">
+    
+    <label for="data">Choose the number of Jobtracker you want (1-5)</label>
+    <select id="data" name="data">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>  
+    <input type="submit" value="submit">
+    
+    </form>
+</div>
+        
+    </div>
+
+    
+
+</body>
+</html>
+ 

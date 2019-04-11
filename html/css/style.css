@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font: normal 16px sans-serif;
+  color: #555;
+
+}
+
+
+.container-fluid {
+  background: transparent;
+
+}
+
+a{
+  text-decoration: none;
+  opacity: 0.75;
+  color: #fff;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a.btn{
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  background-color: #3f51b5;
+  opacity: 1;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+
+ h2{
+  font-family: "Quicksand", sans-serif;
+}
+
+
+/*Hero Styles*/
+
+.hero{
+  position: relative;
+  /*justify-content: center;
+  text-align: center;*/
+  min-height: 100vh;
+  color: #fff;
+
+}
+
+.hero .background-image {
+  position: absolute;
+  margin-top: -21px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-color: #80a3db;
+
+}
+
+.hero h1{
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+}
+
+.hero h3{
+  font: normal 28px "Open Sans", sans-serif;
+  margin-bottom: 40px;
+}
+
+.hero a.btn{
+  padding: 20px 46px;
+}
+
+.hero-content-area {
+  opacity: 0;
+  margin-top: 100px;
+  animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade{
+  100%{
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+#layer2 {
+  background-color: #141414;
+}
+
+
+/*.layer2 .background-image {
+  position: relative;
+  margin-top: 100px;
+  bottom: 12px;
+  left: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 2;
+  background-color: #141414;
+
+}*/
+
+.layer h1{
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+}
+
+.layer2 h1 {
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.layer2 h3{
+  color: #fff;
+}
+
+
+.web h1{
+    font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+}
+
+.layer h3{
+
+}
+
+#layer4 {
+  background-color: #fff;
+}
+
+.info h1 {
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+  color: #141414;
+}
+
+.info p {
+  color: #141414;
+}
+
+
+.info br {
+  color: #141414;
+}
+
+
+.btn btn-lg btn-filled {
+  
+    background: #745cf9;
+    border: 2px solid#745cf9;
+}
+
+.btn-filled:visited {
+    color: #fff;
+}
+
+.stripe{
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  width: 100%;
+  color: red;
+  padding: 20px 0;
+}
+
+.info {
+
+  position: relative;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.layer {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+.layer2 {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+}
+
+
+#layer {
+  background-color: #fff;
+  margin-top: 0;
+
+}
+
+
+
+
+
