@@ -10,16 +10,16 @@
    - yum:
       name: "scsi-target-utils"
       state: present
+
+   - service:
+      name: "tgtd"
+      state: restarted
    
    
    - command: "iptables -F"
    - command: "setenforce 0"
 
-   - service:
-      name: "tgtd"
-      state: restarted
-
-
+   
    - lvol:
       vg: "vgcloud"
       lv: "{{ client }}"
@@ -29,7 +29,13 @@
    - lineinfile:
       path: "/etc/tgt/targets.conf"
       regexp: "^default"
-      line: "default-driver iscsi\n <target mycloud>\nbacking-store /vgcloud/{{client}}\n</target>"
+      line: "default-driver iscsi\n<target mycloud>\nbacking-store /vgcloud/{{client}}\n</target>"
+
+   - service:
+      name: "tgtd"
+      state: restarted   
+
+
 #  - name: to make file system
 #   filesystem:
 #    fstype: ext4

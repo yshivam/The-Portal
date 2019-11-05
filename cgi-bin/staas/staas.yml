@@ -30,10 +30,13 @@
   - name: write in file
     lineinfile:
       path: /etc/exports
-      line: "/staas/client *(rw, no_root_squash)"
+      line: "/staas/{{ client }} *(rw,no_root_squash)"
   - name: start nfs service
     service:
       name: nfs
       state: started
       enabled: yes
+  - name: starting export fs service
+    command: exportfs -a
+
 

@@ -23,14 +23,14 @@ port = form.getvalue('port')
 
 #if a[0] == 0:
 #	print(port)
-b = subprocess.getstatusoutput("sudo docker run -dit -p {1}:22 --name {0} firefox_test:v1".format(usr , port))
+b = subprocess.getstatusoutput("sudo docker run -dit -p {1}:22 --name {0} syaduka/firefox_final:v1".format(usr , port))
 #b = subprocess.getstatusoutput("docker run -dit --ipc=host --net=host --env=DISPLAY --volume=$HOME/.Xauthority:/root/.Xauthority --name={0} centos_net:v1  firefox".format(usr))
 if b[0] == 0:
 	print("Firefox is ready, run this script in your terminal!!!!!!!!  \n\n\n")
 
 		#print("docker run -dit --ipc=host --net=host --env=DISPLAY --volume=$HOME/.Xauthority:/root/.Xauthority --name={0} centos_net:v1 firefox".format(usr))
 		#print("\n\nssh {0}@192.168.43.7 -t -X 'docker start {0};sleep 5000' ".format(usr))
-	print("<br><br> <strong> ssh 192.168.43.7 -p {} -X firefox </strong>".format(port))
+	print("<br><br> <strong> ssh 172.20.10.2 -p {} -X firefox </strong>".format(port))
 	print("\n \n <br><br>YOUR DEFAULT PASSWORD IS 'iuc'")
 else:
 	print("user name or number already exits, try again!!!")    

@@ -56,6 +56,6 @@ print("""  <pre id="pre"><strong> For Linux: </strong>
 
 print("mkdir /media/{0}".format(user))
 print("<br> <br>")
-print("<br> <br> mount 192.168.43.241:/staas/{0}  /media/{0}".format(user))
+print("<br> <br> mount 172.20.10.2:/staas/{0}  /media/{0}".format(user))
 
 

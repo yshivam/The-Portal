@@ -41,15 +41,16 @@ if setup_output1[0]  == 0:
 	print("""  <pre id="pre"><strong> For Linux: </strong> 
 
 	<strong>Target Setup done. Copy the following commands and run in your terminal</strong> </pre>  \n """)
-	print(""" <br> <br> <strong> iscsiadm --mode discoverydb --type sendtargets --portal 192.168.43.7 --discover </strong>
-
-	<br> <br> <strong> iscsiadm --mode node --targetname mycloud --portal 192.168.43.7:3260 --login
+	print(""" <br> <br> <strong> iscsiadm --mode discoverydb --type sendtargets --portal 172.20.10.2 --discover </strong>
+	
+	<br> <br> <strong> iscsiadm --mode node --targetname mycloud --portal 172.20.10.2:3260 --login
 		     </strong> """)
 
 
  
 else:
         print("target setup failed... .")
+        print(setup_output1[1])
         
 
 
